@@ -1,4 +1,5 @@
-== Remember the Cow ==
+Remember the Cow
+-----------------------
 
 This is a rememberthemilk.com client command line client written in ruby. Pure
 command line interface (cli.rb) works pretty fine, however, ncurses interface
