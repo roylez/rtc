@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+#Author: Roy L Zuo (roylzuo at gmail dot com)
+#Last Change: Fri May 08 21:45:13 2009 EST
+#Description: 
+
+$version = 0.1
+
+$api_key       = ''
+$shared_secret = ''
+$token         = ''
+
+$config_dir    = "#{ENV['HOME']}/.rtc"
+$last_list     = File.join($config_dir,'last.yml')          #file to save last listing sequence
+
+#command line color
+$c  = { :reset => "\e[m", 
+        :list => "\e[37;45;1m",       #list color
+        :overdue => "\e[2m", 
+        :repeat => "=",
+        :priority => {'1'=>"\e[30;41m", '2'=>"\e[30;44m", '3'=>"\e[30;46m"}, 
+        :tag => "\e[34m",
+        :today => "\e[1m", 
+        :w_title => "\e[36m",
+}
+
+#curses interface options
+$use_ascii = false
