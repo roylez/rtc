@@ -1,0 +1,6 @@
+== Remember the Cow ==
+
+This is a rememberthemilk.com client command line client written in ruby. Pure
+command line interface (cli.rb) works pretty fine, however, ncurses interface
+(cui.rb) development is suspended, waiting for ruby-ncurses to add unicode
+support.
