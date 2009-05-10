@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #Author: Roy L Zuo (roylzuo at gmail dot com)
-#Last Change: Mon Apr 20 16:23:11 2009 EST
+#Last Change: Sun May 10 10:38:24 2009 EST
 #Description: 
 #       This scripts emulates rtm's twitter IM commands. For more information,
 #       go to http://www.rememberthemilk.com/services/twitter/ .
@@ -75,7 +75,7 @@ end
                     'list_id' =>res['list']['id'],
                     'taskseries_id' => res['list']['taskseries']['id'],
                     'task_id' => res['list']['taskseries']['task']['id'],
-                    'tags' =>tags     })
+                    'tags' =>tags.join(',')     })
         end
         if priority and not priority.empty?
             @rtm.tasks.setPriority({'timeline'=>@rtm.timelines.create['timeline'],
