@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #Author: Roy L Zuo (roylzuo at gmail dot com)
-#Last Change: Sun May 10 10:38:24 2009 EST
+#Last Change: Thu May 14 23:29:45 2009 EST
 #Description: 
 #       This scripts emulates rtm's twitter IM commands. For more information,
 #       go to http://www.rememberthemilk.com/services/twitter/ .
@@ -115,6 +115,8 @@ end
                             'taskseries_id'=>lastlist[id][1],
                             'task_id'=>lastlist[id][2]  })
                 lastlist.delete(id)
+            else
+                puts "Error: invalid task id #{id}, please run '#{$0} gl' first."
             end 
         }
         open($last_list,'w') { |f| f.puts lastlist.to_yaml }
@@ -129,6 +131,8 @@ end
                             'taskseries_id'=>lastlist[id][1],
                             'task_id'=>lastlist[id][2]  })
                 lastlist.delete(id)
+            else
+                puts "Error: invalid task id #{id}, please run '#{$0} gl' first."
             end 
         }
         open($last_list,'w') { |f| f.puts lastlist.to_yaml }
@@ -201,6 +205,8 @@ end
                             'taskseries_id'=>lastlist[id][1],
                             'task_id'=>lastlist[id][2]  })
                 lastlist.delete(id)
+            else
+                puts "Error: invalid task id #{id}, please run '#{$0} gl' first."
             end
         }
         open($last_list,'w') { |f| f.puts lastlist.to_yaml }
