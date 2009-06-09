@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #Author: Roy L Zuo (roylzuo at gmail dot com)
-#Last Change: Thu May 14 23:29:45 2009 EST
+#Last Change: Tue Jun 09 16:41:58 2009 EST
 #Description: 
 #       This scripts emulates rtm's twitter IM commands. For more information,
 #       go to http://www.rememberthemilk.com/services/twitter/ .
@@ -49,8 +49,8 @@ class CLI
 end
 
     def add(*args)
-        if args.join(' ').include?('-')
-            tags, name = args.join(' ').split('-')
+        if args.join(' ').include?($tag_delimiter)
+            tags, name = args.join(' ').split($tag_delimiter)
             tags = tags.strip.gsub(/\s+/,',')
         else
             tags = nil

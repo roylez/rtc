@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #Author: Roy L Zuo (roylzuo at gmail dot com)
-#Last Change: Fri May 08 21:45:13 2009 EST
+#Last Change: Tue Jun 09 16:42:21 2009 EST
 #Description: 
 
 $version = 0.1
@@ -25,3 +25,5 @@ $c  = { :reset => "\e[m",
 
 #curses interface options
 $use_ascii = false
+
+$tag_delimiter = '@'
